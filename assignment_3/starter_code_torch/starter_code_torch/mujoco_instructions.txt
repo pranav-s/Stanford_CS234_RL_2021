@@ -1,0 +1,31 @@
+Create a directory ~/.mujoco
+
+Download MuJoCo 2.0 for your OS from https://www.roboti.us/index.html.
+Make sure to download and install the right Mujoco version for your Operating System:
+* Windows: mujoco200_win64
+* Mac: mujoco200_macos
+* Linux: mujoco200_linux
+
+Unzip the downloaded file and put its contents in the directory ~/.mujoco/mujoco200
+
+Go to the following restricted link to get the MujoCo License:
+https://web.stanford.edu/class/cs234/restricted/mjkey.txt
+
+Download the file and save it to ~/.mujoco/mjkey.txt
+
+For Mac Users Only:
+    - Due to a Mac OS Security update, you now need to manually whitelist your terminal to run unverified software.
+    - Go to System Preferences -> Security & Privacy -> Privacy -> Developer Tools -> checkbox the "Terminal"
+      (You may need to unlock it first by clicking the lock button on the bottom left.)
+    - If you are having trouble locating this setting, see https://github.com/hashicorp/terraform/issues/23033#issuecomment-543507812
+    - If your encounter an error related to "PEP 517", you may need to install a older version of gcc: "brew install gcc@8"
+
+Finally, install mujoco-py:
+
+$ conda activate cs234-torch
+$ pip install mujoco-py==2.0.2.13
+
+and you should be ready to go!
+
+More detailed instructions for installing mujoco-py:
+https://github.com/openai/mujoco-py
